@@ -100,9 +100,7 @@ $password = ConvertTo-SecureString -String "CrypticPassword99!" -Force -AsPlainT
 Export-PfxCertificate -Cert $cert -FilePath "$env:USERPROFILE\.aspnet\https\soapapp.pfx" -Password $password
 ```
 
-- Certificado gerado está instalado na pasta de Autoridades de Certificação Raiz Confiáveis do seu computador local. 
-- Execute este comando rápido no PowerShell como Administrador:
-
+- Para gerar e instalar o Certificado na pasta de Autoridades de Certificação Raiz Confiáveis do seu computador local. Execute o bloco inteiro
 ```bash 
 $cert = Get-ChildItem -Path Cert:\CurrentUser\My | Where-Object { $_.Subject -like "*CN=localhost*" } | Select-Object -First 1
 $rootStore = New-Object System.Security.Cryptography.X509Certificates.X509Store("Root", "LocalMachine")
@@ -111,14 +109,12 @@ $rootStore.Add($cert)
 $rootStore.Close()
 ```
 
-- Abra o PowerShell e execute este comando para visualizar o Thumbprint do certificado criado para o localhost:
-powershell
-
+- Execute este comando para visualizar o Thumbprint do Certificado criado
 ```bash 
 Get-ChildItem -Path Cert:\CurrentUser\My | Where-Object { $_.Subject -like "*CN=localhost*" } | Select-Object Subject, Thumbprint, NotAfter
 ```
 
-- Caso precise de erros de Certificado, remover qualquer certificado localhost antigo para não dar conflito de chaves
+- Caso de erros nos registros do Certificado, remover instalação de qualquer certificado localhost antigo para não dar conflito de chaves, não exclui fisicamente. 
 ```bash 
 Get-ChildItem -Path Cert:\CurrentUser\My | Where-Object { $_.Subject -like "*CN=localhost*" } | Remove-Item
 ```
