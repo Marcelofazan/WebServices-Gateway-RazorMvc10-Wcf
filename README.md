@@ -47,6 +47,11 @@ private static readonly string TryAspUrl = "https://[SUA_API_LEGADO].tryasp.net/
 #### 📁 Frontend 
 A aplicação consome a URL do projeto Rest-Soap que consome um GET e GETALL da API. 
 
+#### 🔄 Executar a aplicação
+- Para inciar a aplicação 
+```bash
+dotnet run
+```
 
 #### ⚙️ Configuração Certificado x.509 
 - Executar Editor PowerShell 
