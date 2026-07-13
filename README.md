@@ -27,6 +27,11 @@ private static readonly string TryAspUrl = "https://[SUA_API_LEGADO].tryasp.net/
 ```
 
 #### 📁 RestToSoap
+#### 🔄 Executar a aplicação
+- Para inciar a aplicação 
+```bash
+dotnet run
+```
 
 - Modifique [SUA_API_LEGADO] , [SENHA_CERTIFICADO] e o [THUMBPRINT_CERTIFICADO] no arquivo **appsettings.json**, no trecho indicado: 
 
