@@ -1,4 +1,4 @@
-## 🌐 WebServices-Gateway-Net10-Soap
+## 🌐 WebServices-Gateway-RazorMvc10-Wcf
 Exemplo de auditoria de integração API para SOAP com WS-Security em C# RazorMvc10 e ASP.NET Core 8. 
 
 - Segurança de Ponta a Ponta
@@ -10,7 +10,7 @@ Exemplo de auditoria de integração API para SOAP com WS-Security em C# RazorMv
 | Tecnologia | Descrição |
 |-----------|-----------|
 | **HTTPClient**  | Classe primária utilizada para enviar solicitações HTTP e receber respostas de recursos identificados por um URI. |
-| **WS-Security **  | Camada de segurança para criptografia e autenticação de requisições. |
+| **WS-Security**  | Camada de segurança para criptografia e autenticação de requisições. |
 
 #### 💬 Requisitos do Projeto
 - Certificado válido X.509
