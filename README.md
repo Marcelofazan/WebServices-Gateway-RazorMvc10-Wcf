@@ -1,5 +1,9 @@
+
 ## 🌐 WebServices-Gateway-RazorMvc10-Wcf
 Exemplo de auditoria de integração API para SOAP com WS-Security em C# RazorMvc10 e ASP.NET Core 8. 
+
+#### 🎨 Aqui está uma demonstração do projeto
+<img width="700" height="350" alt="MonitorSoap" src="https://github.com/user-attachments/assets/3b4909b4-c551-452a-a8f6-ec75409506ea" />
 
 - Segurança de Ponta a Ponta
 - Para proteger o tráfego de dados confidenciais, ela implementa segurança criptográfica robusta baseada em padrões de mercado (WS-Security). 
