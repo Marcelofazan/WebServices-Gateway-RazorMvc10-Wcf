@@ -1,0 +1,78 @@
+﻿@model IEnumerable<consumirRestToSoap.Models.PessoaModel>
+@{
+    ViewData["Title"] = "Consumidores - GET ALL";
+    var listaPessoas = ViewBag.ListaPessoas as List<consumirRestToSoap.Models.PessoaModel> ?? new List<consumirRestToSoap.Models.PessoaModel>();
+}
+
+<div class="container-fluid mt-4">
+    <div class="card shadow-sm border-0 rounded-3">
+        <div class="card-header bg-dark text-white p-3">
+            <h4 class="mb-0 fw-bold"><i class="bi bi-grid-3x3-gap-fill me-2"></i> Monitor de Consumidores (GET ALL)</h4>
+        </div>
+        <div class="card-body p-4">
+
+            @if (ViewBag.ErrorMessage != null)
+            {
+                <div class="alert alert-danger border-0 shadow-sm mb-4">
+                    <i class="bi bi-exclamation-triangle-fill me-2"></i> @ViewBag.ErrorMessage
+                </div>
+            }
+
+            <div class="row">
+                <div class="col-lg-7">
+                    <h5 class="text-secondary fw-bold mb-3">Registros Decodificados da Árvore XML</h5>
+                    <div class="table-responsive">
+                        <table class="table table-hover border">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Razão Social / Nome</th>
+                                    <th>CPF / CNPJ</th>
+                                    <th>E-mail</th>
+                                    <th class="text-center">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in listaPessoas)
+                                {
+                                    <tr>
+                                        <td class="fw-bold">@item.IdPessoa</td>
+                                        <td>@item.RazaoSocial</td>
+                                        <td>@item.CnpjCpf</td>
+                                        <td>@item.Email</td>
+                                        <td class="text-center">
+                                            <a href="/Pessoa/Details?id=@item.IdPessoa" class="btn btn-sm btn-outline-primary">
+                                                <i class="bi bi-eye"></i> Filtrar ID
+                                            </a>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <h5 class="text-secondary fw-bold mb-3">Inspeção de Payload do Barramento</h5>
+
+                    <ul class="nav nav-tabs mb-2" id="payloadTabs" role="tablist">
+                        <li class="nav-item">
+                            <button class="nav-link active btn-sm" id="xml-tab" data-bs-toggle="tab" data-bs-target="#xmlContent" type="button">SOAP Envelope</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link btn-sm" id="json-tab" data-bs-toggle="tab" data-bs-target="#jsonContent" type="button">JSON Decodificado</button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content border p-2 rounded bg-light">
+                        <div class="tab-pane fade show active" id="xmlContent" role="tabpanel">
+                            <pre class="bg-dark text-warning p-3 rounded font-monospace small" style="max-height: 400px; overflow-y: auto;"><code>@ViewBag.XmlBrutoSOAP</code></pre>
+                        </div>
+                        <div class="tab-pane fade" id="jsonContent" role="tabpanel">
+                            <pre class="bg-dark text-success p-3 rounded font-monospace small" style="max-height: 400px; overflow-y: auto;"><code>@ViewBag.JsonDecodificado</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

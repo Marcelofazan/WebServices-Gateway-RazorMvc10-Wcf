@@ -1,0 +1,68 @@
+﻿@model consumirRestToSoap.Models.PessoaModel
+@{
+    ViewData["Title"] = "Detalhes do Consumidor - Gateway SecureX";
+
+    // CORREÇÃO CRÍTICA: Trata dinamicamente se o Controller enviou uma lista ou um objeto único
+    consumirRestToSoap.Models.PessoaModel pessoa = null;
+
+    if (ViewBag.Pessoa is List<consumirRestToSoap.Models.PessoaModel> lista && lista.Count > 0)
+    {
+        pessoa = lista[0]; // Extrai o primeiro registro da lista
+    }
+    else
+    {
+        pessoa = ViewBag.Pessoa as consumirRestToSoap.Models.PessoaModel;
+    }
+
+    // Salvaguarda caso tudo venha nulo
+    pessoa ??= new consumirRestToSoap.Models.PessoaModel();
+}
+
+<div class="container mt-4">
+    <h2>Ficha do Consumidor Legado</h2>
+    <hr />
+
+    @if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+    {
+        <div class="alert alert-danger" role="alert">
+            <h5>⚠️ Erro de Localização</h5>
+            <p class="mb-0">@ViewBag.ErrorMessage</p>
+        </div>
+    }
+
+    <div class="card shadow-sm mb-4">
+        <div class="card-header bg-info text-white">
+            <h5 class="mb-0">Dados do Registro #@pessoa.IdPessoa</h5>
+        </div>
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">Razão Social / Nome</dt>
+                <dd class="col-sm-9">@pessoa.RazaoSocial</dd>
+
+                <dt class="col-sm-3">CPF / CNPJ</dt>
+                <dd class="col-sm-9">@pessoa.CnpjCpf</dd>
+
+                <dt class="col-sm-3">Endereço de E-mail</dt>
+                <dd class="col-sm-9">@pessoa.Email</dd>
+
+                <dt class="col-sm-3">Telefone para Contato</dt>
+                <dd class="col-sm-9">@pessoa.Telefone</dd>
+
+                <dt class="col-sm-3">Nome de Usuário</dt>
+                <dd class="col-sm-9">@pessoa.Usuario</dd>
+            </dl>
+            <a asp-action="ListAll" class="btn btn-secondary">Voltar para a Listagem</a>
+        </div>
+    </div>
+
+    <!-- Seção de Auditoria do Proxy -->
+    <div class="card">
+        <div class="card-header bg-dark text-white">
+            <h5 class="mb-0">Auditoria do Endpoint Remoto</h5>
+        </div>
+        <div class="card-body">
+            <h6>XML de Retorno do Barramento:</h6>
+            <pre class="bg-light p-3 border"><code>@ViewBag.XmlBrutoSOAP</code></pre>
+        </div>
+    </div>
+</div>

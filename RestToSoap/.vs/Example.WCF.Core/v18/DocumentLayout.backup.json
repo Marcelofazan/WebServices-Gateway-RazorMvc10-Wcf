@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Temp1\\rest-to-soap-gateway-main\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A5D10BCE-98AB-499A-1647-FBFB48E0EBB5}|src\\Example.WCF.Core.Api\\Example.WCF.Core.Api.csproj|d:\\temp1\\rest-to-soap-gateway-main\\src\\example.wcf.core.api\\controllers\\consumersubmit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A5D10BCE-98AB-499A-1647-FBFB48E0EBB5}|src\\Example.WCF.Core.Api\\Example.WCF.Core.Api.csproj|solutionrelative:src\\example.wcf.core.api\\controllers\\consumersubmit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ConsumerSubmit.cs",
+              "DocumentMoniker": "D:\\Temp1\\rest-to-soap-gateway-main\\src\\Example.WCF.Core.Api\\Controllers\\ConsumerSubmit.cs",
+              "RelativeDocumentMoniker": "src\\Example.WCF.Core.Api\\Controllers\\ConsumerSubmit.cs",
+              "ToolTip": "D:\\Temp1\\rest-to-soap-gateway-main\\src\\Example.WCF.Core.Api\\Controllers\\ConsumerSubmit.cs",
+              "RelativeToolTip": "src\\Example.WCF.Core.Api\\Controllers\\ConsumerSubmit.cs",
+              "ViewState": "AgIAANwAAAAAAAAAAAAAANwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T20:57:43.992Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

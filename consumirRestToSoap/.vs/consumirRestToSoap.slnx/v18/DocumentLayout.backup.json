@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Temp1\\consumirRestToSoap\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0FD64BF0-E4DC-FC37-01B5-50A83992694A}|consumirRestToSoap\\consumirRestToSoap.csproj|d:\\temp1\\consumirresttosoap\\consumirresttosoap\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0FD64BF0-E4DC-FC37-01B5-50A83992694A}|consumirRestToSoap\\consumirRestToSoap.csproj|solutionrelative:consumirresttosoap\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Temp1\\consumirRestToSoap\\consumirRestToSoap\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "consumirRestToSoap\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Temp1\\consumirRestToSoap\\consumirRestToSoap\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "consumirRestToSoap\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABQAAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-07-12T22:43:33.42Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
