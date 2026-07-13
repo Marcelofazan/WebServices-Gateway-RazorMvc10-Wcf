@@ -9,9 +9,6 @@ Exemplo de auditoria de integração API para SOAP com WS-Security em C# RazorMv
 #### 🎨 Aqui está uma demonstração do projeto
 <img width="700" height="350" alt="MonitorSoap" src="https://github.com/user-attachments/assets/3b4909b4-c551-452a-a8f6-ec75409506ea" />
 
-
-
-
 #### 📋 O que voçê vai ver nesse Projeto
 | Tecnologia | Descrição |
 |-----------|-----------|
@@ -29,7 +26,7 @@ Exemplo de auditoria de integração API para SOAP com WS-Security em C# RazorMv
 private static readonly string TryAspUrl = "https://[SUA_API_LEGADO].tryasp.net/api/pessoa";
 ```
 
-#### 📁 Backend
+#### 📁 RestToSoap
 
 - Modifique [SUA_API_LEGADO] , [SENHA_CERTIFICADO] e o [THUMBPRINT_CERTIFICADO] no arquivo **appsettings.json**, no trecho indicado: 
 
@@ -50,8 +47,8 @@ private static readonly string TryAspUrl = "https://[SUA_API_LEGADO].tryasp.net/
 }
 ```
 
-#### 📁 Frontend 
-A aplicação consome a URL do projeto Rest-Soap que consome um GET e GETALL da API. 
+#### 📁 consumirRestToSoap
+A Aplicação gera duas requisições GetAll e Get. 
 
 #### 🔄 Executar a aplicação
 - Para inciar a aplicação 
@@ -69,9 +66,9 @@ dotnet run
 ```
 
 #### ⚙️ Configuração Certificado x.509 
-- Executar Editor PowerShell 
+- Abrir o Editor PowerShell 
 Pressione Windows + R no teclado e Digite **powershell_ise** e pressione Enter.
-
+- Execute o bloco inteiro, o codigo abaixo gera o certificado que usa dados **Criptografados** 
 ```bash 
 # 1. Garante a pasta de destino
 mkdir -Force "$env:USERPROFILE\.aspnet\https"
