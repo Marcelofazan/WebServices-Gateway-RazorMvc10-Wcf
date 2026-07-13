@@ -10,6 +10,7 @@ Exemplo de auditoria de integração API para SOAP com WS-Security em C# RazorMv
 | Tecnologia | Descrição |
 |-----------|-----------|
 | **HTTPClient**  | Classe primária utilizada para enviar solicitações HTTP e receber respostas de recursos identificados por um URI. |
+| **WCF Client**  | Objeto local que atua como um intermediário (proxy), permitindo que seu aplicativo se comunique e consuma serviços remotos |
 | **WS-Security**  | Camada de segurança para criptografia e autenticação de requisições. |
 
 #### 💬 Requisitos do Projeto
@@ -17,13 +18,14 @@ Exemplo de auditoria de integração API para SOAP com WS-Security em C# RazorMv
 - Necessário acomplamento de serviços, o Frontend Auditoria depende do Gateway Rest Soap.
 
 #### ⚠️ Alterar URL para a da API 
+- Alterar em **ConsumerSubmitController.cs** o Endpoint da API Legada 
 ```bash
-"https://[SUA_api].tryasp.net/api/Pessoa";
+private static readonly string TryAspUrl = "https://[SUA_API_LEGADO].tryasp.net/api/pessoa";
 ```
 
 #### 📁 Backend
 
-- Modifique a [SENHA_CERTIFICADO] e o [THUMBPRINT_CERTIFICADO] no arquivo **appsettings.json**, no trecho indicado: 
+- Modifique [SUA_API_LEGADO] , [SENHA_CERTIFICADO] e o [THUMBPRINT_CERTIFICADO] no arquivo **appsettings.json**, no trecho indicado: 
 
 ```bash 
 {
@@ -37,7 +39,7 @@ Exemplo de auditoria de integração API para SOAP com WS-Security em C# RazorMv
   "CertStorePath": "%USERPROFILE%\\.aspnet\\https\\soapapp.pfx",
   "CertStorePassword": "[SENHA_CERTIFICADO]",
   "CertThumbprint": "[THUMBPRINT_CERTIFICADO]",
-  "SoapEndpoint": "https://localhost:7150/api/v1/consumer-submit",
+  "SoapEndpoint": "[SUA_API_LEGADO]",
   "SoapAction": "http://securex.common"
 }
 ```
