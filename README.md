@@ -53,6 +53,15 @@ A aplicação consome a URL do projeto Rest-Soap que consome um GET e GETALL da 
 dotnet run
 ```
 
+#### Fluxo da Estrutura Técnica   
+```bash 
+[Cliente / API REST] 
+        |──> [Gateway REST-SOAP] 
+                    |──(WS-Security / AES-256)
+                                 |──> [Serviço SOAP/WCF] 
+                                              |──> [Frontend Razor MVC 10]
+```
+
 #### ⚙️ Configuração Certificado x.509 
 - Executar Editor PowerShell 
 Pressione Windows + R no teclado e Digite **powershell_ise** e pressione Enter.
