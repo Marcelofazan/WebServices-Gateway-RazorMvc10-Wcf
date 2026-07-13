@@ -108,15 +108,9 @@ $rootStore.Open("ReadWrite")
 $rootStore.Add($cert)
 $rootStore.Close()
 ```
-
 - Execute este comando para visualizar o Thumbprint do Certificado criado
 ```bash 
 Get-ChildItem -Path Cert:\CurrentUser\My | Where-Object { $_.Subject -like "*CN=localhost*" } | Select-Object Subject, Thumbprint, NotAfter
-```
-
-- Caso de erros nos registros do Certificado, remover instalação de qualquer certificado localhost antigo para não dar conflito de chaves, não exclui fisicamente. 
-```bash 
-Get-ChildItem -Path Cert:\CurrentUser\My | Where-Object { $_.Subject -like "*CN=localhost*" } | Remove-Item
 ```
 
 
