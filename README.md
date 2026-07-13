@@ -69,9 +69,9 @@ dotnet run
                               |──> [Serviço SOAP/WCF] 
                                         |──> [Frontend Razor MVC 10]
 ```
-🔹 O Projeto [A] que é uma API com banco de dados MySQL hospedada, é compartilhada com o Projeto [B].
-🔹 O Projeto [B] consome a API e criptografa, transformando sua saida em SOAP WS-Security.
-🔹 O Projeto [C] se conecta com interface ao Projeto [B] consumido dados criptografados. 
+- O Projeto [A] que é uma API com banco de dados MySQL hospedada, é compartilhada com o Projeto [B].
+- O Projeto [B] consome a API e criptografa, transformando sua saida em SOAP WS-Security.
+- O Projeto [C] se conecta com interface ao Projeto [B] consumido dados criptografados. 
 
 #### 📁 Api8-Mobile-Mysql
 API que é compartilhada o EndPoint para o projeto **RestToSoap**
