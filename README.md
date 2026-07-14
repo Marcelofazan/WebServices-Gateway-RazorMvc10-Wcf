@@ -1,6 +1,6 @@
 
 ## 🌐 WS-Gateway-RazorMvc10-Wcf
-Exemplo Auditoria de integração API para SOAP x.509 com WS-Security em C# ASP.NET CORE 10  Razor Mvc e .NET Core 8. 
+Exemplo de integração API para SOAP x.509 com WS-Security em C# ASP.NET CORE 10  Razor Mvc e .NET Core 8. 
 
 **Segurança de Ponta a Ponta**
 - Para proteger o tráfego de dados confidenciais, ela implementa segurança criptográfica robusta baseada em padrões de mercado (WS-Security). 
