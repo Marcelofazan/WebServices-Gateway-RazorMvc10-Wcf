@@ -1,5 +1,5 @@
 
-## 🌐 WS-Gateway-RazorMvc10-Wcf
+## 🌐 WS-Gateway-RazorMvc-Wcf
 Exemplo de integração REST para SOAP x.509 com WS-Security em C# ASP.NET CORE 10  Razor Mvc e .NET Core 8. 
 
 **Segurança de Ponta a Ponta**
